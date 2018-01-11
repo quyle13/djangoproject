@@ -2,6 +2,9 @@ from django.db import models
 
 class Category(models.Model):
 	name = models.CharField(max_length=128,unique=True)
+	views = models.IntegerField(default=0)
+	likes = models.IntegerField(default=0)
+	
 	def __unicode__(self):
 		return self.name
 class Page(models.Model):
@@ -9,7 +12,7 @@ class Page(models.Model):
 	title = models.CharField(max_length=128)
 	#URLField like CharField but designed for storing URL
 	url = models.URLField()
-	#IntegerField for storing Integer
+	#IntegerField for storing Integerx`
 	views = models.IntegerField(default=0)
 
 	def __unicode__(self):
