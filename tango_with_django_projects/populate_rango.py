@@ -20,22 +20,22 @@ def add_cat(name,views,likes):
 	return c
 def populateData():
 	python_cat = add_cat('Python',128,64)
-	add_page(cat=python_cat,title="Official Python Tutorial", url = "http://docs.python.org/2/tutorial/")
-	add_page(cat=python_cat, title="How to Think like a Computer Scientist", url="http://www.greenteapress.com/thinkpython/")
-    	add_page(cat=python_cat,title="Learn Python in 10 Minutes",url="http://www.korokithakis.net/tutorials/python/")
+	add_page(cat=python_cat,title="Official Python Tutorial", url = "http://docs.python.org/2/tutorial/",views=10)
+	add_page(cat=python_cat, title="How to Think like a Computer Scientist", url="http://www.greenteapress.com/thinkpython/",views=20)
+    	add_page(cat=python_cat,title="Learn Python in 10 Minutes",url="http://www.korokithakis.net/tutorials/python/",views=30)
 
     	django_cat = add_cat("Django",64,32)
-    	add_page(cat=django_cat,title="Official Django Tutorial",url="https://docs.djangoproject.com/en/1.5/intro/tutorial01/")
+    	add_page(cat=django_cat,title="Official Django Tutorial",url="https://docs.djangoproject.com/en/1.5/intro/tutorial01/",views=40)
 
-    	add_page(cat=django_cat,title="Django Rocks", url="http://www.djangorocks.com/")
+    	add_page(cat=django_cat,title="Django Rocks", url="http://www.djangorocks.com/",views=10)
 
-   	add_page(cat=django_cat,title="How to Tango with Django",  url="http://www.tangowithdjango.com/")
+   	add_page(cat=django_cat,title="How to Tango with Django",  url="http://www.tangowithdjango.com/",views=23)
 
   	frame_cat = add_cat("Other Frameworks",32,16)
 
-    	add_page(cat=frame_cat,title="Bottle",url="http://bottlepy.org/docs/dev/")
+    	add_page(cat=frame_cat,title="Bottle",url="http://bottlepy.org/docs/dev/",views=100)
 
-    	add_page(cat=frame_cat,title="Flask",  url="http://flask.pocoo.org")
+    	add_page(cat=frame_cat,title="Flask",  url="http://flask.pocoo.org",views=30)
 
     	#print out what we created for users
     	for c in Category.objects.all():
