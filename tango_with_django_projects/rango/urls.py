@@ -8,6 +8,9 @@ urlpatterns = patterns('',
         url(r'^category/(?P<category_name_slug>[\w\-]+)/$',views.category,name="Category"),
         url(r'^add_category/$',views.add_category,name = "Add category"),	
         url(r'^category/(?P<category_name_slug>[\w\-]+)/add_page/$',views.add_page,name = "Add page"),
+        url(r'^register/$',views.register,name="Register"),
+        url(r'^login/$',views.user_login,name="User Login"),
+        url(r'^logout/$',views.user_logout,name="Logout"),
         )
 	
 if settings.DEBUG:
