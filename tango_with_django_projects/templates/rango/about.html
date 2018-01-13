@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html>
+    {% extends 'base.html' %}
     {% load static %}
-    <head>
-        <title>About page</title>
-       
-    </head>
-
-    <body>
-        <h1>About Django</h1>
+    {%block title%} About Django {%endblock%}
+    {%block body_block %}
+    
         <img src=" {% static "image/TT_1.jpg" %}"  />
 
-    </body>
+    {% endblock %}
 
 </html>
